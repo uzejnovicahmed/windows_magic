@@ -6,14 +6,16 @@ function Get-CredentialFromWindowsCredentialManager  {
     .SYNOPSIS
     Gets a PowerShell Credential (PSCredential) from the Windows Credential Manager
     .DESCRIPTION
-    Adapted from: http://stackoverflow.com/questions/7162604/get-cached-credentials-in-powershell-from-windows-7-credential-manager
+    1.Adapted from: http://stackoverflow.com/questions/7162604/get-cached-credentials-in-powershell-from-windows-7-credential-manager
+    2.Adapted from : https://tobivnext.wordpress.com/2012/06/18/powershell-cmdlet-zum-auslesen-der-anmeldeinformationen-aus-der-windows-anmeldeinformationsverwaltung/
     .PARAMETER TargetName
     The name of the target login informations in the Windows Credential Manager
     .EXAMPLE
-    .\Get-CredentialFromWindowsCredentialManager.ps1 tfs.codeplex.com
+    Get-CredentialFromWindowsCredentialManager mywebsite
+    
     UserName                             Password
     ——–                             ——–
-    codeplexuser                         System.Security.SecureString
+    mywebsiteusername                         System.Security.SecureString
     .LINK
     Get-Credential
 #>
